@@ -1,0 +1,12 @@
+-- Install mason and lspconfig via lazy.nvim
+{
+  "williamboman/mason.nvim",
+  config = true
+},
+{
+  "williamboman/mason-lspconfig.nvim",
+  dependencies = { "neovim/nvim-lspconfig" },
+  config = function()
+    require("mason-lspconfig").setup()
+  end
+}
